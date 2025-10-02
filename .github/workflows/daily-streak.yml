@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: '30 0 * * *'   # 6:00 AM IST (00:30 UTC)
     - cron: '30 7 * * *'   # 1:00 PM IST (07:30 UTC)
-    - cron: '43 16 * * *'  # 10:13 PM IST (16:43 UTC)
+    - cron: '50 16 * * *'  # 10:20 PM IST (16:50 UTC)
   workflow_dispatch:
 
 permissions:
