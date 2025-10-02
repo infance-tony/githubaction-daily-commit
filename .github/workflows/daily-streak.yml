@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: '30 0 * * *'   # 6:00 AM IST (00:30 UTC)
     - cron: '30 7 * * *'   # 1:00 PM IST (07:30 UTC)
-    - cron: '30 16 * * *'  # 10:00 PM IST (16:30 UTC)
+    - cron: '33 16 * * *'  # 10:03 PM IST (16:33 UTC)
   workflow_dispatch:
 
 permissions:
@@ -39,4 +39,4 @@ jobs:
 
             Co-authored-by: infance-tony <infancetony.cs22@stellamaryscoe.edu.in>"
             git push
-          fi
+          
