@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: '30 0 * * *'   # 6:00 AM IST (00:30 UTC)
     - cron: '30 7 * * *'   # 1:00 PM IST (07:30 UTC)
-    - cron: '35 16 * * *'  # 10:05 PM IST (16:35 UTC)
+    - cron: '39 16 * * *'  # 10:09 PM IST (16:39 UTC)
   workflow_dispatch:
 
 permissions:
@@ -35,8 +35,9 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "todays commit done sucessfully
-
-            Co-authored-by: infance-tony <infancetony.cs22@stellamaryscoe.edu.in>"
+            echo "todays commit done sucessfully" > commit_msg.txt
+            echo "" >> commit_msg.txt
+            echo "Co-authored-by: infance-tony <infancetony.cs22@stellamaryscoe.edu.in>" >> commit_msg.txt
+            git commit -F commit_msg.txt
             git push
-          
+          fi
